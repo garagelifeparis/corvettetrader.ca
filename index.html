@@ -6,24 +6,46 @@
   <title>CorvetteTrader.ca — Canada’s Corvette Marketplace</title>
   <link rel="stylesheet" href="assets/style.css" />
   <style>
-    /* small landing tweaks that reuse the site palette */
-    .hero { max-width: 960px; margin: 40px auto; padding: 24px; background:#111; border:1px solid #333; border-radius:8px; }
-    .hero h1 { margin:0 0 10px 0; }
+    /* --- extra landing page styling --- */
+    .hero { 
+      max-width: 960px; 
+      margin: 40px auto; 
+      padding: 24px; 
+      background:#111; 
+      border:1px solid #333; 
+      border-radius:8px; 
+      text-align:center;
+    }
+    .hero h1 { margin:0 0 10px 0; color:#ff0000; }
     .hero p { margin:0 0 20px 0; color:#ddd; }
-    .cta { display:flex; gap:12px; flex-wrap:wrap; }
+
+    .construction {
+      background: #ffcc00;
+      color: #000;
+      font-weight: bold;
+      text-align: center;
+      padding: 12px;
+      border-bottom: 3px solid #ff0000;
+      font-size: 1.1rem;
+    }
+
+    .cta { display:flex; justify-content:center; gap:12px; flex-wrap:wrap; }
     .btn { display:inline-block; padding:10px 16px; border-radius:6px; background:#e11; color:#fff; text-decoration:none; font-weight:600; }
     .btn.secondary { background:#222; border:1px solid #444; }
-    .nav { max-width: 960px; margin: 24px auto 0; display:flex; gap:16px; }
+    .nav { max-width: 960px; margin: 24px auto 0; display:flex; gap:16px; justify-content:center; }
     .nav a { color:#ddd; text-decoration:none; }
     .nav a:hover { text-decoration:underline; }
-    footer { max-width:960px; margin:40px auto; color:#aaa; }
+    footer { max-width:960px; margin:40px auto; color:#aaa; text-align:center; }
   </style>
 </head>
 <body>
 
-  <!-- site title / top nav -->
+  <div class="construction">
+    🚧 Website Under Construction — CorvetteTrader.ca is in live development. Listings are for testing only.
+  </div>
+
   <header class="site">
-    <h1>CorvetteTrader.ca</h1>
+    <h1 style="text-align:center; color:#ff0000;">CorvetteTrader.ca</h1>
     <nav class="nav">
       <a href="index.html" class="active">Home</a>
       <a href="listings.html">Browse Listings</a>
@@ -32,11 +54,11 @@
     <hr />
   </header>
 
-  <!-- hero / call to action -->
   <main>
     <section class="hero">
       <h1>Canada’s Corvette Parts Marketplace</h1>
-      <p>Buy &amp; sell Corvette parts, accessories, and vehicles across Canada. Fast search, Corvette-specific filters, and a clean, no-nonsense UI.</p>
+      <p>Buy &amp; sell Corvette parts, accessories, and vehicles across Canada.<br>
+      Fast search, Corvette-specific filters, and a clean, no-nonsense UI.</p>
       <div class="cta">
         <a class="btn" href="listings.html">Browse Listings</a>
         <a class="btn secondary" href="sell.html" aria-disabled="true" title="Coming soon">Post a Part</a>
