@@ -1,0 +1,44 @@
+[
+  {
+    "id": "c7-wheels-001",
+    "title": "C7 Z06 Wheels (OEM)",
+    "price": 2500,
+    "generation": "C7",
+    "partType": "Wheels",
+    "city": "Toronto",
+    "province": "ON",
+    "condition": "Used",
+    "description": "OEM set with caps, minor wear.",
+    "image": "https://via.placeholder.com/640x360?text=C7+Z06+Wheels",
+    "contact": "info@corvettetrader.ca",
+    "posted": "2025-09-10"
+  },
+  {
+    "id": "c5-coilovers-001",
+    "title": "C5 Coilovers",
+    "price": 800,
+    "generation": "C5",
+    "partType": "Suspension",
+    "city": "Hamilton",
+    "province": "ON",
+    "condition": "Used",
+    "description": "Height adjustable, 20k km.",
+    "image": "https://via.placeholder.com/640x360?text=C5+Coilovers",
+    "contact": "info@corvettetrader.ca",
+    "posted": "2025-08-19"
+  },
+  {
+    "id": "c8-exhaust-001",
+    "title": "C8 Performance Exhaust (New)",
+    "price": 3200,
+    "generation": "C8",
+    "partType": "Exhaust",
+    "city": "Cambridge",
+    "province": "ON",
+    "condition": "New",
+    "description": "Brand new in box, receipts included.",
+    "image": "https://via.placeholder.com/640x360?text=C8+Exhaust",
+    "contact": "info@corvettetrader.ca",
+    "posted": "2025-09-27"
+  }
+]
