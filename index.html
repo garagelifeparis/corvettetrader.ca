@@ -1,79 +1,52 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CorvetteTrader.ca | Corvette Parts Marketplace</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CorvetteTrader.ca — Canada’s Corvette Marketplace</title>
+  <link rel="stylesheet" href="assets/style.css" />
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #111;
-      color: white;
-      margin: 0;
-      padding: 0;
-    }
-    header {
-      background-color: #c00;
-      padding: 20px;
-      text-align: center;
-      font-size: 2em;
-      letter-spacing: 1px;
-    }
-    main {
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 20px;
-      background: #1a1a1a;
-      border-radius: 8px;
-    }
-    h2 {
-      color: #ff0000;
-    }
-    .listing {
-      border-bottom: 1px solid #333;
-      padding: 10px 0;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9em;
-      background: #111;
-      border-top: 1px solid #333;
-    }
-    a {
-      color: #ff0000;
-      text-decoration: none;
-    }
+    /* small landing tweaks that reuse the site palette */
+    .hero { max-width: 960px; margin: 40px auto; padding: 24px; background:#111; border:1px solid #333; border-radius:8px; }
+    .hero h1 { margin:0 0 10px 0; }
+    .hero p { margin:0 0 20px 0; color:#ddd; }
+    .cta { display:flex; gap:12px; flex-wrap:wrap; }
+    .btn { display:inline-block; padding:10px 16px; border-radius:6px; background:#e11; color:#fff; text-decoration:none; font-weight:600; }
+    .btn.secondary { background:#222; border:1px solid #444; }
+    .nav { max-width: 960px; margin: 24px auto 0; display:flex; gap:16px; }
+    .nav a { color:#ddd; text-decoration:none; }
+    .nav a:hover { text-decoration:underline; }
+    footer { max-width:960px; margin:40px auto; color:#aaa; }
   </style>
 </head>
 <body>
-  <header>CorvetteTrader.ca</header>
+
+  <!-- site title / top nav -->
+  <header class="site">
+    <h1>CorvetteTrader.ca</h1>
+    <nav class="nav">
+      <a href="index.html" class="active">Home</a>
+      <a href="listings.html">Browse Listings</a>
+      <a href="sell.html" aria-disabled="true" title="Coming soon">Post a Part</a>
+    </nav>
+    <hr />
+  </header>
+
+  <!-- hero / call to action -->
   <main>
-    <h2>Canada’s Corvette Parts Marketplace</h2>
-    <p>Buy and sell Corvette parts, accessories, and vehicles across Canada — powered by Lee Munro Garage.</p>
-
-    <div class="listing">
-      <h3>💥 C7 Z06 Wheels (OEM)</h3>
-      <p>Price: $2,500 CAD — Location: Toronto, ON</p>
-      <p><a href="#">Contact Seller</a></p>
-    </div>
-
-    <div class="listing">
-      <h3>🔧 C5 Coilovers (Used)</h3>
-      <p>Price: $800 CAD — Location: Hamilton, ON</p>
-      <p><a href="#">Contact Seller</a></p>
-    </div>
-
-    <div class="listing">
-      <h3>🔥 C8 Exhaust (New)</h3>
-      <p>Price: $3,200 CAD — Location: Cambridge, ON</p>
-      <p><a href="#">Contact Seller</a></p>
-    </div>
-
-    <p style="text-align:center; margin-top:30px;">
-      <a href="mailto:info@corvettetrader.ca">Email Us</a> | <a href="#">Post a Part</a>
-    </p>
+    <section class="hero">
+      <h1>Canada’s Corvette Parts Marketplace</h1>
+      <p>Buy &amp; sell Corvette parts, accessories, and vehicles across Canada. Fast search, Corvette-specific filters, and a clean, no-nonsense UI.</p>
+      <div class="cta">
+        <a class="btn" href="listings.html">Browse Listings</a>
+        <a class="btn secondary" href="sell.html" aria-disabled="true" title="Coming soon">Post a Part</a>
+      </div>
+    </section>
   </main>
-  <footer>© 2025 CorvetteTrader.ca — Operated by Lee Munro Garage</footer>
+
+  <footer>
+    <p>© 2025 CorvetteTrader.ca — Powered by Lee Munro Garage</p>
+  </footer>
+
 </body>
 </html>
