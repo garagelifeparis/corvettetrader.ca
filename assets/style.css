@@ -1,0 +1,77 @@
+/* CorvetteTrader.ca Base Styles */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 40px auto;
+  max-width: 900px;
+  background-color: #111;
+  color: #eee;
+  line-height: 1.6;
+}
+
+header {
+  text-align: center;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #ff0000;
+}
+
+h1 {
+  color: #ff0000;
+  font-size: 2rem;
+}
+
+a {
+  color: #ff4444;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+#filters {
+  background: #1a1a1a;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+}
+
+input, select, button {
+  margin: 5px;
+  padding: 6px;
+  border-radius: 6px;
+  border: none;
+}
+
+button {
+  background: #ff0000;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #cc0000;
+}
+
+.card {
+  background: #222;
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 12px;
+  margin: 15px 0;
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+footer {
+  text-align: center;
+  margin-top: 30px;
+  border-top: 1px solid #444;
+  padding-top: 10px;
+  color: #aaa;
+}
