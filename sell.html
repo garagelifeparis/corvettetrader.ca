@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Thanks! | CorvetteTrader.ca</title>
+  <title>Post a Part | CorvetteTrader.ca</title>
   <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
@@ -13,17 +13,93 @@
     <nav>
       <a href="index.html">Home</a>
       <a href="listings.html">Browse Listings</a>
-      <a href="sell.html">Post a Part</a>
+      <a href="sell.html" class="active">Post a Part</a>
     </nav>
     <hr />
   </header>
 
   <main class="container">
-    <div class="card" style="max-width:720px;margin:24px auto;">
-      <h2>Thanks! 🎉</h2>
-      <p>Your submission was received. We’ll review it and add approved posts to the public listings during the beta.</p>
-      <p><a href="listings.html">Back to Listings</a> &nbsp; <a href="sell.html">Post Another Part</a></p>
-    </div>
+    <h2>Post a Part</h2>
+    <p>Fill out the form below. Submissions go to our inbox (Netlify Forms) while we’re building. We’ll review and add approved posts to the public listings.</p>
+
+    <!-- ✅ Netlify Form (name must match hidden form-name) -->
+    <form
+      name="part-listing"
+      method="POST"
+      action="/sell-success.html"
+      netlify
+      data-netlify="true"
+      netlify-honeypot="bot-field"
+      enctype="multipart/form-data"
+      class="card"
+      style="max-width:780px;margin:20px auto;padding:16px;"
+    >
+      <!-- Netlify needs these -->
+      <input type="hidden" name="form-name" value="part-listing" />
+      <p style="display:none">
+        <label>Don’t fill this out: <input name="bot-field" /></label>
+      </p>
+
+      <label>Title*
+        <input type="text" name="title" required placeholder="eg. C7 Z06 OEM Wheels" />
+      </label>
+
+      <label>Generation*
+        <select name="generation" required>
+          <option value="C1">C1</option><option value="C2">C2</option>
+          <option value="C3">C3</option><option value="C4">C4</option>
+          <option value="C5">C5</option><option value="C6">C6</option>
+          <option value="C7">C7</option><option value="C8">C8</option>
+        </select>
+      </label>
+
+      <label>Part Type*
+        <select name="partType" required>
+          <option>Wheels</option><option>Suspension</option>
+          <option>Exhaust</option><option>Body</option>
+          <option>Interior</option><option>Electronics</option>
+          <option>Other</option>
+        </select>
+      </label>
+
+      <label>Condition*
+        <select name="condition" required>
+          <option>New</option><option>Used</option>
+        </select>
+      </label>
+
+      <label>Price (CAD)*
+        <input type="number" name="price" required />
+      </label>
+
+      <label>City*
+        <input type="text" name="city" required />
+      </label>
+
+      <label>Province*
+        <select name="province" required>
+          <option>AB</option><option>BC</option><option>MB</option><option>NB</option>
+          <option>NL</option><option>NS</option><option>NT</option><option>NU</option>
+          <option>ON</option><option>PE</option><option>QC</option>
+          <option>SK</option><option>YT</option>
+        </select>
+      </label>
+
+      <label>Description*
+        <textarea name="description" required placeholder="Condition details, fitment, shipping/pickup, etc."></textarea>
+      </label>
+
+      <label>Photos (up to 3)
+        <input type="file" name="photos" accept="image/*" multiple />
+      </label>
+
+      <label>Contact Email*
+        <input type="email" name="contact" required placeholder="you@example.com" />
+      </label>
+
+      <button type="submit" class="btn">Submit</button>
+      <p><a href="listings.html">Back to Listings</a></p>
+    </form>
   </main>
 
   <footer>
