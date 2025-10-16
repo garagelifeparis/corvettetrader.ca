@@ -6,7 +6,6 @@
   <title>Post a Part | CorvetteTrader.ca</title>
   <link rel="stylesheet" href="assets/style.css" />
 </head>
-
 <body>
   <header>
     <div class="banner">🚧 Website Under Construction — CorvetteTrader.ca is in live development. Listings are for testing only.</div>
@@ -23,95 +22,83 @@
     <h2>Post a Part</h2>
     <p>Fill out the form below. Submissions go to our inbox (Netlify Forms) while we’re building. We’ll review and add approved posts to the public listings.</p>
 
-    <!-- ✅ Netlify Form Setup -->
-    <form name="part-listing"
-          method="POST"
-          action="sell-success.html"
-          data-netlify="true"
-          netlify-honeypot="bot-field"
-          enctype="multipart/form-data"
-          class="card"
-          style="max-width:780px;margin:20px auto;padding:16px;">
-
+    <!-- ✅ Netlify Form (name must match hidden form-name) -->
+    <form
+      name="part-listing"
+      method="POST"
+      action="/sell-success.html"
+      netlify
+      data-netlify="true"
+      netlify-honeypot="bot-field"
+      enctype="multipart/form-data"
+      class="card"
+      style="max-width:780px;margin:20px auto;padding:16px;"
+    >
+      <!-- Netlify needs these -->
       <input type="hidden" name="form-name" value="part-listing" />
-      <p style="display:none;"><label>Don’t fill this out: <input name="bot-field" /></label></p>
+      <p style="display:none">
+        <label>Don’t fill this out: <input name="bot-field" /></label>
+      </p>
 
-      <label><strong>Title*</strong><br>
-        <input type="text" name="title" required placeholder="e.g. C7 Z06 OEM Wheels" style="width:100%;" />
+      <label>Title*
+        <input type="text" name="title" required placeholder="eg. C7 Z06 OEM Wheels" />
       </label>
 
-      <label><strong>Generation*</strong><br>
-        <select name="generation" required style="width:100%;">
-          <option value="C1">C1</option>
-          <option value="C2">C2</option>
-          <option value="C3">C3</option>
-          <option value="C4">C4</option>
-          <option value="C5">C5</option>
-          <option value="C6">C6</option>
-          <option value="C7">C7</option>
-          <option value="C8">C8</option>
+      <label>Generation*
+        <select name="generation" required>
+          <option value="C1">C1</option><option value="C2">C2</option>
+          <option value="C3">C3</option><option value="C4">C4</option>
+          <option value="C5">C5</option><option value="C6">C6</option>
+          <option value="C7">C7</option><option value="C8">C8</option>
         </select>
       </label>
 
-      <label><strong>Part Type*</strong><br>
-        <select name="partType" required style="width:100%;">
-          <option value="Wheels">Wheels</option>
-          <option value="Suspension">Suspension</option>
-          <option value="Exhaust">Exhaust</option>
-          <option value="Body">Body</option>
-          <option value="Interior">Interior</option>
-          <option value="Electronics">Electronics</option>
-          <option value="Other">Other</option>
+      <label>Part Type*
+        <select name="partType" required>
+          <option>Wheels</option><option>Suspension</option>
+          <option>Exhaust</option><option>Body</option>
+          <option>Interior</option><option>Electronics</option>
+          <option>Other</option>
         </select>
       </label>
 
-      <label><strong>Condition*</strong><br>
-        <select name="condition" required style="width:100%;">
-          <option value="New">New</option>
-          <option value="Used">Used</option>
+      <label>Condition*
+        <select name="condition" required>
+          <option>New</option><option>Used</option>
         </select>
       </label>
 
-      <label><strong>Price (CAD)*</strong><br>
-        <input type="number" name="price" required placeholder="e.g. 1200" style="width:100%;" />
+      <label>Price (CAD)*
+        <input type="number" name="price" required />
       </label>
 
-      <label><strong>City*</strong><br>
-        <input type="text" name="city" required placeholder="e.g. Cambridge" style="width:100%;" />
+      <label>City*
+        <input type="text" name="city" required />
       </label>
 
-      <label><strong>Province*</strong><br>
-        <select name="province" required style="width:100%;">
-          <option value="ON">ON</option>
-          <option value="QC">QC</option>
-          <option value="BC">BC</option>
-          <option value="AB">AB</option>
-          <option value="MB">MB</option>
-          <option value="SK">SK</option>
-          <option value="NS">NS</option>
-          <option value="NB">NB</option>
-          <option value="NL">NL</option>
-          <option value="PE">PE</option>
+      <label>Province*
+        <select name="province" required>
+          <option>AB</option><option>BC</option><option>MB</option><option>NB</option>
+          <option>NL</option><option>NS</option><option>NT</option><option>NU</option>
+          <option>ON</option><option>PE</option><option>QC</option>
+          <option>SK</option><option>YT</option>
         </select>
       </label>
 
-      <label><strong>Description*</strong><br>
-        <textarea name="description" required placeholder="Condition details, fitment, shipping/pickup, etc." style="width:100%;height:100px;"></textarea>
+      <label>Description*
+        <textarea name="description" required placeholder="Condition details, fitment, shipping/pickup, etc."></textarea>
       </label>
 
-      <label><strong>Photos (up to 3)*</strong><br>
+      <label>Photos (up to 3)
         <input type="file" name="photos" accept="image/*" multiple />
       </label>
 
-      <label><strong>Contact Email*</strong><br>
-        <input type="email" name="contact" required placeholder="you@example.com" style="width:100%;" />
+      <label>Contact Email*
+        <input type="email" name="contact" required placeholder="you@example.com" />
       </label>
 
-      <div style="text-align:center;margin-top:16px;">
-        <button type="submit" class="btn">Submit</button>
-        &nbsp;
-        <a href="listings.html" class="btn">Back to Listings</a>
-      </div>
+      <button type="submit" class="btn">Submit</button>
+      <p><a href="listings.html">Back to Listings</a></p>
     </form>
   </main>
 
