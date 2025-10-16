@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Browse Listings | CorvetteTrader.ca</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+
+<body>
+  <header>
+    <h1>CorvetteTrader.ca</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="listings.html" class="active">Browse Listings</a>
+      <a href="sell.html">Post a Part</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="filters-section">
+      <h2>Filter Listings</h2>
+      <form id="filters">
+        <input type="text" name="q" placeholder="Search by keyword..." />
+        <select name="generation"></select>
+        <select name="partType"></select>
+        <select name="province"></select>
+        <input type="number" name="min" placeholder="Min Price" />
+        <input type="number" name="max" placeholder="Max Price" />
+        <button type="submit">Apply Filters</button>
+      </form>
+      <p><span id="count">0</span> listings found</p>
+    </section>
+
+    <section id="results" class="grid"></section>
+  </main>
+
+  <footer>
+    <p>© 2025 CorvetteTrader.ca — Powered by Lee Munro Garage</p>
+  </footer>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>
